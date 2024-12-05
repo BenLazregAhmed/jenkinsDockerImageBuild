@@ -10,9 +10,9 @@ node {
     }
 
     stage('Test Image') {
-        app.withRun('-p 8080:80') { c ->
+        app.withRun('-p 80:80') { c ->
             sh 'docker ps'
-            sh 'curl localhost:8080'
+            sh 'curl localhost:80'
         }
     }
 
